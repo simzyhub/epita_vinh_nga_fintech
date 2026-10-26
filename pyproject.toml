@@ -10,8 +10,17 @@ requires-python = ">=3.14"
 dependencies = [
     "python-dotenv>=1.2.4",
     "requests>=2.34.2",
+    "rich>=15.0.0",
 ]
 
 [build-system]
 requires = ["uv_build>=0.13.1,<0.14.0"]
 build-backend = "uv_build"
+
+[project.scripts]
+epita-vinh-nga-cli = "epita_vinh_nga_fintech.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
